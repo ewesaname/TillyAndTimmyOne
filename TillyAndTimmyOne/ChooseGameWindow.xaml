@@ -47,8 +47,7 @@
             TextWrapping="Wrap" Width="293" Height="71"> 
             Hi
             <TextBlock Text="{Binding Path=Text, ElementName=playerNameTextbox}"/>
-            . Click a
-         'Play Me' button.
+            . Click a 'Play Me' button.
         </TextBlock>
         
     </Canvas>
