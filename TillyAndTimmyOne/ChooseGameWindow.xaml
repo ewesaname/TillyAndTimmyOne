@@ -44,10 +44,10 @@
             Padding="20"
             Visibility="Visible"
             TextAlignment="Center"
-            TextWrapping="Wrap" Width="293" Height="71"> 
-            Hi
+            TextWrapping="Wrap" Width="393" Height="113"> 
+             OK then,
             <TextBlock Text="{Binding Path=Text, ElementName=playerNameTextbox}"/>
-            . Click a 'Play Me' button.
+            . Click on the game you'd like to play and then press Enter.
         </TextBlock>
         
     </Canvas>
