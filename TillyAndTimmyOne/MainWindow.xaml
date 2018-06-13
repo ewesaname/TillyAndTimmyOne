@@ -1,0 +1,105 @@
+﻿<Window x:Class="TillyAndTimmyOne.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Let's Play Tables" Height="516.8" Width="643.4">
+
+    <Grid Height="384" Margin="10,20,9.8,0" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0"           
+            Margin="5,0,0,10"
+            Height="auto" 
+            Width="auto"    
+            HorizontalAlignment="Center"
+            FontFamily="Segoe Print"
+            FontSize="16"
+            FontWeight="Bold"
+            Foreground="Red"                      
+            Text="We're Tilly and Timmy - we're the Times-Table Twins" />
+
+
+        <Image Grid.Column="0" Grid.Row="1" Grid.RowSpan="2">
+            <Image.Source>
+                <BitmapImage UriSource="Resources/Tilly TT.png"/>
+            </Image.Source>
+        </Image>
+
+        <Image Grid.Column="2" Grid.Row="1" Grid.RowSpan="2">
+            <Image.Source>
+                <BitmapImage UriSource="Resources/Timmy TT.png"/>
+            </Image.Source>
+        </Image>
+
+        <TextBlock x:Name="whatsYourNameLabel" 
+                   Grid.Column="1" Grid.Row="1"
+                   Height="40" Width="auto" 
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   FontFamily="segoe print" 
+                   FontWeight="SemiBold"  
+                   FontSize="16"
+                   Foreground="red"
+                   Text="What's your name?"/>
+
+        <TextBox x:Name="playerNameTextbox" 
+                 Text="Player"
+                 Grid.Column="1" Grid.Row="2"
+                 VerticalAlignment="Top"
+                 HorizontalAlignment="Center"
+                 BorderBrush="Black"
+                 Height="auto" 
+                 Width="160"
+                 HorizontalContentAlignment="Center"
+                 CaretBrush="red"
+                 FontFamily="Segoe Print"
+                 FontSize="30"
+                 ToolTip="Type your name and then press Enter" 
+                 KeyUp="playerNameTextbox_KeyUp" />
+
+        <TextBlock Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"
+            x:Name="doYouWannaPlayTextblock" 
+            FontFamily="Segoe Print"
+            FontSize="16"
+            FontWeight="SemiBold"
+            Foreground="Red"
+            Padding="20"
+            Visibility="Hidden"
+            TextAlignment="Center"
+            TextWrapping="Wrap" Margin="0,0.4,0.2,-25"> 
+            Hi,
+            <TextBlock Text="{Binding Path=Text, ElementName=playerNameTextbox}"/>
+            - it's good to see you. Would you like to play 'Tables'? If so, just click the 'Choose Game' button.
+        </TextBlock>  
+
+        <Button Grid.Column="2" Grid.Row="3"                
+                x:Name="chooseGameButton"
+                Margin="9.8,32.6,63.8,18" 
+                BorderBrush="Black" BorderThickness="2"
+                Background="Gold"
+                Width="auto"
+                Height="auto"
+                Content="Choose Game"                
+                FontFamily="Segoe Print"
+                FontSize="16"
+                FontWeight="SemiBold"
+                Foreground="Red"
+                Visibility="Hidden" Click="chooseGameButton_Click"
+                />
+
+        </Grid>
+
+</Window>
